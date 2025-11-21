@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTC Website - Mobile QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #0f52ba 0%, #2E3C4E 100%);
+            color: white;
+            padding: 2rem;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+        }
+        h1 {
+            color: #0f52ba;
+            margin-bottom: 1rem;
+        }
+        p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        #qrcode {
+            display: inline-block;
+            padding: 1rem;
+            background: white;
+            border: 2px solid #0f52ba;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        .instructions h3 {
+            color: #0f52ba;
+            margin-top: 0;
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+        .instructions li {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        .url {
+            background: #e3f2fd;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            word-break: break-all;
+            color: #0f52ba;
+            font-weight: bold;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Gene Therapy Consultancy</h1>
+        <p>Scan this QR code with your mobile device to view the website</p>
+        
+        <div id="qrcode"></div>
+        
+        <div class="url"></div>
+
+        <div class="instructions">
+            <h3>📱 How to Scan:</h3>
+            <ol>
+                <li>Open your phone's camera app</li>
+                <li>Point it at the QR code above</li>
+                <li>Tap the notification that appears</li>
+                <li>The website will open in your browser</li>
+            </ol>
+        </div>
+
+        <div style="background: #fff3cd; padding: 1rem; border-radius: 10px; margin-top: 1rem; border-left: 4px solid #ffc107;">
+            <p style="color: #856404; margin: 0; font-size: 0.95rem;">
+                <strong>⚠️ Important:</strong> If the QR code doesn't work, your website needs to be deployed first. 
+                See <strong>DEPLOYMENT_GUIDE.md</strong> for step-by-step instructions.
+            </p>
+        </div>
+    </div>
+
+    <!-- QR Code Generator Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>
+        // IMPORTANT: Update this URL with your deployed website URL
+        // Options:
+        // 1. If using GitHub Pages: https://username.github.io/repository-name/
+        // 2. If using Netlify/Vercel: Your custom domain
+        // 3. If using custom domain: https://yourdomain.com/
+        
+        // For now, this will generate a QR code for the current location
+        let websiteURL = '';
+        
+        // Check if we're on localhost or file://
+        if (window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            // Use a placeholder URL - YOU MUST UPDATE THIS
+            websiteURL = 'https://genetherapyconsultancy.com';
+            
+            // Show warning
+            document.body.insertAdjacentHTML('afterbegin', `
+                <div style="background: #fff3cd; color: #856404; padding: 1rem; text-align: center; border-bottom: 2px solid #ffc107;">
+                    <strong>⚠️ Configuration Required:</strong> Please update the website URL in mobile-qr-code.html (line 95) with your deployed URL
+                </div>
+            `);
+        } else {
+            // We're on a real server, use the current origin
+            websiteURL = window.location.origin + '/index.html';
+        }
+        
+        // Generate QR Code
+        new QRCode(document.getElementById("qrcode"), {
+            text: websiteURL,
+            width: 256,
+            height: 256,
+            colorDark: "#0f52ba",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+
+        // Update URL display
+        document.querySelector('.url').textContent = websiteURL;
+        
+        // Add manual input option
+        document.querySelector('.instructions').insertAdjacentHTML('afterend', `
+            <div style="background: #e8f4fd; padding: 1.5rem; border-radius: 10px; margin-top: 1.5rem; text-align: left;">
+                <h3 style="color: #0f52ba; margin-top: 0;">Custom URL Generator</h3>
+                <p style="color: #555; margin: 0.5rem 0;">Enter your deployed website URL to generate a custom QR code:</p>
+                <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                    <input type="url" id="customUrl" placeholder="https://yourdomain.com" 
+                           style="flex: 1; padding: 0.75rem; border: 2px solid #0f52ba; border-radius: 8px; font-size: 1rem;">
+                    <button onclick="updateQRCode()" 
+                            style="padding: 0.75rem 1.5rem; background: #0f52ba; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">
+                        Generate
+                    </button>
+                </div>
+            </div>
+        `);
+        
+        // Function to update QR code
+        window.updateQRCode = function() {
+            const customUrl = document.getElementById('customUrl').value.trim();
+            if (!customUrl) {
+                alert('Please enter a valid URL');
+                return;
+            }
+            
+            // Validate URL
+            try {
+                new URL(customUrl);
+            } catch (e) {
+                alert('Please enter a valid URL starting with http:// or https://');
+                return;
+            }
+            
+            // Clear existing QR code
+            document.getElementById('qrcode').innerHTML = '';
+            
+            // Generate new QR code
+            new QRCode(document.getElementById("qrcode"), {
+                text: customUrl,
+                width: 256,
+                height: 256,
+                colorDark: "#0f52ba",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+            
+            // Update URL display
+            document.querySelector('.url').textContent = customUrl;
+        };
+    </script>
+</body>
+</html>

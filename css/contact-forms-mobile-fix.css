@@ -1,0 +1,137 @@
+/* Contact Page Forms - Mobile Loading Fix */
+
+@media (max-width: 768px) {
+    /* Ensure contact-form containers have proper dimensions on mobile */
+    .contact-form {
+        min-height: 650px !important; /* Increased from 600px to ensure iframe loads */
+        padding: 0 !important;
+        position: relative !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+    
+    /* Ensure iframes take full width and proper height on mobile */
+    .contact-form iframe {
+        width: 100% !important;
+        min-height: 600px !important;
+        height: auto !important;
+        border: none !important;
+        display: block !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    
+    /* Ensure feature cards containing forms don't collapse */
+    .feature-card:has(.contact-form) {
+        padding: 1.5rem !important;
+        margin-bottom: 2rem !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+    
+    /* Loading and error states - better visibility on mobile */
+    .iframe-loading,
+    .iframe-error {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        text-align: center !important;
+        width: 80% !important;
+        z-index: 10 !important;
+    }
+    
+    /* Spinner visibility */
+    .spinner {
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 auto 1rem !important;
+    }
+    
+    /* Info cards below forms - proper spacing on mobile */
+    .two-column {
+        gap: 1.5rem !important;
+        margin-top: 2rem !important;
+    }
+    
+    /* Ensure LeadConnector forms are properly sized */
+    iframe[src*="leadconnectorhq.com"] {
+        width: 100% !important;
+        min-height: 600px !important;
+        max-width: 100% !important;
+        display: block !important;
+    }
+    
+    /* Fix for resources form (taller) */
+    iframe[data-form-id="VyW0dVdgfzTpmH5FeOxy"] {
+        min-height: 630px !important;
+    }
+    
+    /* Fix for expert network form (tallest) */
+    iframe[data-form-id="nuJxdcBfd1mxipZimsrf"] {
+        min-height: 1169px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens - ensure forms still load properly */
+    .contact-form {
+        min-height: 700px !important;
+        padding: 0 !important;
+    }
+    
+    .contact-form iframe {
+        min-height: 650px !important;
+    }
+    
+    .feature-card:has(.contact-form) {
+        padding: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Resources form */
+    iframe[data-form-id="VyW0dVdgfzTpmH5FeOxy"] {
+        min-height: 680px !important;
+    }
+    
+    /* Expert network form */
+    iframe[data-form-id="nuJxdcBfd1mxipZimsrf"] {
+        min-height: 1200px !important;
+    }
+}
+
+/* Landscape mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    .contact-form {
+        min-height: 500px !important;
+    }
+    
+    .contact-form iframe {
+        min-height: 500px !important;
+    }
+}
+
+/* Additional mobile-specific iframe fixes for better loading */
+@media (max-width: 768px) {
+    /* Ensure iframes render properly on mobile */
+    iframe[src*="leadconnectorhq.com"],
+    iframe[id^="inline-"] {
+        -webkit-overflow-scrolling: touch !important;
+        transform: translateZ(0) !important;
+        -webkit-transform: translateZ(0) !important;
+        will-change: transform !important;
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+    }
+    
+    /* Force hardware acceleration on mobile */
+    .contact-form {
+        transform: translate3d(0,0,0) !important;
+        -webkit-transform: translate3d(0,0,0) !important;
+    }
+    
+    /* Ensure parent containers don't restrict iframe */
+    .feature-card:has(.contact-form) {
+        contain: layout !important;
+    }
+}

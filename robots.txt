@@ -1,0 +1,21 @@
+# Gene Therapy Consultancy - Robots.txt
+# https://genetherapyconsultancy.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://genetherapyconsultancy.com/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 1
+
+# Disallow private/admin areas (if any in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all CSS, JS, and images for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+Allow: /images/

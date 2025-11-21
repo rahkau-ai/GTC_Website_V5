@@ -1,0 +1,663 @@
+<!-- ====================
+     CUSTOM FORMS WITH DATABASE INTEGRATION
+     Replace LeadConnectorHQ iframes with these forms
+     ==================== -->
+
+<!-- FORM 1: SERVICES INQUIRY FORM -->
+<div class="custom-form-container">
+    <form id="services-inquiry-form" class="custom-form">
+        <div class="required-notice">
+            <i class="fas fa-info-circle"></i>
+            <strong>Required fields</strong> are marked with an asterisk (<span class="required">*</span>)
+        </div>
+
+        <!-- Basic Information -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="services_full_name">
+                    Full Name <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="services_full_name" 
+                    name="full_name" 
+                    class="form-control" 
+                    placeholder="John Smith"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="services_email">
+                    Email Address <span class="required">*</span>
+                </label>
+                <input 
+                    type="email" 
+                    id="services_email" 
+                    name="email" 
+                    class="form-control" 
+                    placeholder="john.smith@company.com"
+                    required
+                >
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="services_company">
+                    Company/Organization <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="services_company" 
+                    name="company" 
+                    class="form-control" 
+                    placeholder="Your Company Name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="services_phone">
+                    Phone Number <span class="optional">(optional)</span>
+                </label>
+                <input 
+                    type="tel" 
+                    id="services_phone" 
+                    name="phone" 
+                    class="form-control" 
+                    placeholder="+1 (555) 123-4567"
+                >
+            </div>
+        </div>
+
+        <!-- Project Details -->
+        <div class="form-section">
+            <h3 class="form-section-title">
+                <i class="fas fa-flask"></i> Project Details
+            </h3>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="service_interest">
+                        Service of Interest <span class="required">*</span>
+                    </label>
+                    <select 
+                        id="service_interest" 
+                        name="service_interest" 
+                        class="form-control"
+                        required
+                    >
+                        <option value="">Select a service...</option>
+                        <option value="Strategic Planning">Strategic Planning</option>
+                        <option value="Operational Excellence">Operational Excellence</option>
+                        <option value="Regulatory Strategy">Regulatory Strategy</option>
+                        <option value="CMC Development">CMC Development</option>
+                        <option value="Clinical Trial Design">Clinical Trial Design</option>
+                        <option value="Market Access">Market Access</option>
+                        <option value="General Inquiry">General Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="project_stage">
+                        Current Project Stage <span class="required">*</span>
+                    </label>
+                    <select 
+                        id="project_stage" 
+                        name="project_stage" 
+                        class="form-control"
+                        required
+                    >
+                        <option value="">Select stage...</option>
+                        <option value="Discovery/Research">Discovery/Research</option>
+                        <option value="Preclinical">Preclinical</option>
+                        <option value="Phase 1">Phase 1</option>
+                        <option value="Phase 2">Phase 2</option>
+                        <option value="Phase 3">Phase 3</option>
+                        <option value="Commercialization">Commercialization</option>
+                        <option value="Not Started">Not Started</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="urgency">
+                        Timeline/Urgency <span class="optional">(optional)</span>
+                    </label>
+                    <select 
+                        id="urgency" 
+                        name="urgency" 
+                        class="form-control"
+                    >
+                        <option value="Exploring options">Exploring options</option>
+                        <option value="Immediate (within 1 week)">Immediate (within 1 week)</option>
+                        <option value="Soon (1-4 weeks)">Soon (1-4 weeks)</option>
+                        <option value="Planning ahead (1-3 months)">Planning ahead (1-3 months)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget_range">
+                        Approximate Budget <span class="optional">(optional)</span>
+                    </label>
+                    <select 
+                        id="budget_range" 
+                        name="budget_range" 
+                        class="form-control"
+                    >
+                        <option value="Not sure yet">Not sure yet</option>
+                        <option value="<$25k">Under $25,000</option>
+                        <option value="$25k-$50k">$25,000 - $50,000</option>
+                        <option value="$50k-$100k">$50,000 - $100,000</option>
+                        <option value="$100k+">Over $100,000</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="services_message">
+                    Tell us about your needs <span class="required">*</span>
+                </label>
+                <textarea 
+                    id="services_message" 
+                    name="message" 
+                    class="form-control" 
+                    rows="5"
+                    placeholder="Please describe your project, challenges, and how we can help..."
+                    required
+                ></textarea>
+                <span class="form-help-text">
+                    The more details you provide, the better we can prepare for our initial consultation.
+                </span>
+            </div>
+        </div>
+
+        <button type="submit" class="form-submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Submit Inquiry
+        </button>
+    </form>
+</div>
+
+<!-- ==================== -->
+<!-- FORM 2: FREE RESOURCES FORM -->
+<!-- ==================== -->
+<div class="custom-form-container">
+    <form id="resources-form" class="custom-form">
+        <div class="required-notice">
+            <i class="fas fa-info-circle"></i>
+            <strong>Required fields</strong> are marked with an asterisk (<span class="required">*</span>)
+        </div>
+
+        <!-- Basic Information -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="resources_full_name">
+                    Full Name <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="resources_full_name" 
+                    name="full_name" 
+                    class="form-control" 
+                    placeholder="Jane Doe"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="resources_email">
+                    Email Address <span class="required">*</span>
+                </label>
+                <input 
+                    type="email" 
+                    id="resources_email" 
+                    name="email" 
+                    class="form-control" 
+                    placeholder="jane.doe@company.com"
+                    required
+                >
+                <span class="form-help-text">
+                    We'll send the resources to this email address
+                </span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="resources_company">
+                    Company/Organization <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="resources_company" 
+                    name="company" 
+                    class="form-control" 
+                    placeholder="Your Organization"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="job_title">
+                    Job Title <span class="optional">(optional)</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="job_title" 
+                    name="job_title" 
+                    class="form-control" 
+                    placeholder="e.g., Senior Scientist, Project Manager"
+                >
+            </div>
+        </div>
+
+        <!-- Resource Selection -->
+        <div class="form-section">
+            <h3 class="form-section-title">
+                <i class="fas fa-download"></i> Resource Selection
+            </h3>
+
+            <div class="form-group">
+                <label for="resource_interest">
+                    Which resource are you most interested in? <span class="required">*</span>
+                </label>
+                <select 
+                    id="resource_interest" 
+                    name="resource_interest" 
+                    class="form-control"
+                    required
+                >
+                    <option value="">Select a resource...</option>
+                    <option value="AAV Vector Design Guide">AAV Vector Design Guide</option>
+                    <option value="Regulatory Submission Checklist">Regulatory Submission Checklist</option>
+                    <option value="CMC Development Framework">CMC Development Framework</option>
+                    <option value="Clinical Trial Optimization">Clinical Trial Optimization</option>
+                    <option value="Market Access Strategy">Market Access Strategy</option>
+                    <option value="All Resources">All Resources</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="project_focus">
+                    Primary Therapeutic Area <span class="optional">(optional)</span>
+                </label>
+                <select 
+                    id="project_focus" 
+                    name="project_focus" 
+                    class="form-control"
+                >
+                    <option value="Other/Multiple">Select if applicable...</option>
+                    <option value="CNS/Neurological">CNS/Neurological</option>
+                    <option value="Ophthalmology/Retina">Ophthalmology/Retina</option>
+                    <option value="Liver/Metabolic">Liver/Metabolic</option>
+                    <option value="Muscular/Neuromuscular">Muscular/Neuromuscular</option>
+                    <option value="Cardiovascular">Cardiovascular</option>
+                    <option value="Other/Multiple">Other/Multiple</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="current_challenge">
+                    What's your biggest current challenge? <span class="optional">(optional)</span>
+                </label>
+                <textarea 
+                    id="current_challenge" 
+                    name="current_challenge" 
+                    class="form-control" 
+                    rows="3"
+                    placeholder="e.g., Scaling up AAV production, navigating regulatory pathways..."
+                ></textarea>
+            </div>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="form-group">
+            <div class="checkbox-item">
+                <input 
+                    type="checkbox" 
+                    id="subscribe_newsletter" 
+                    name="subscribe_newsletter"
+                    checked
+                >
+                <label for="subscribe_newsletter">
+                    Yes, I'd like to receive occasional insights and updates about gene therapy development
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="form-submit-btn">
+            <i class="fas fa-download"></i>
+            Subscribe and Download Free Resources
+        </button>
+    </form>
+</div>
+
+<!-- ==================== -->
+<!-- FORM 3: EXPERT NETWORK APPLICATION -->
+<!-- ==================== -->
+<div class="custom-form-container">
+    <form id="expert-network-form" class="custom-form">
+        <div class="required-notice">
+            <i class="fas fa-info-circle"></i>
+            <strong>Required fields</strong> are marked with an asterisk (<span class="required">*</span>). 
+            This application takes about 10 minutes to complete.
+        </div>
+
+        <!-- Basic Contact Information -->
+        <div class="form-section">
+            <h3 class="form-section-title">
+                <i class="fas fa-user"></i> Contact Information
+            </h3>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expert_full_name">
+                        Full Name <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="expert_full_name" 
+                        name="full_name" 
+                        class="form-control" 
+                        placeholder="Dr. Sarah Johnson"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expert_email">
+                        Email Address <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="email" 
+                        id="expert_email" 
+                        name="email" 
+                        class="form-control" 
+                        placeholder="sarah.johnson@email.com"
+                        required
+                    >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expert_phone">
+                        Phone Number <span class="required">*</span>
+                    </label>
+                    <input 
+                        type="tel" 
+                        id="expert_phone" 
+                        name="phone" 
+                        class="form-control" 
+                        placeholder="+1 (555) 123-4567"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin_profile">
+                        LinkedIn Profile URL <span class="optional">(optional)</span>
+                    </label>
+                    <input 
+                        type="url" 
+                        id="linkedin_profile" 
+                        name="linkedin_profile" 
+                        class="form-control" 
+                        placeholder="https://www.linkedin.com/in/yourprofile"
+                    >
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Background -->
+        <div class="form-section">
+            <h3 class="form-section-title">
+                <i class="fas fa-briefcase"></i> Professional Background
+            </h3>
+
+            <div class="form-group">
+                <label for="current_position">
+                    Current Position & Company <span class="required">*</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="current_position" 
+                    name="current_position" 
+                    class="form-control" 
+                    placeholder="e.g., Senior Scientist at ABC Biotech"
+                    required
+                >
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="years_experience">
+                        Years of Gene Therapy Experience <span class="required">*</span>
+                    </label>
+                    <select 
+                        id="years_experience" 
+                        name="years_experience" 
+                        class="form-control"
+                        required
+                    >
+                        <option value="">Select years...</option>
+                        <option value="3-5 years">3-5 years</option>
+                        <option value="6-10 years">6-10 years</option>
+                        <option value="11-15 years">11-15 years</option>
+                        <option value="16-20 years">16-20 years</option>
+                        <option value="20+ years">20+ years</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="regulatory_experience">
+                        Regulatory Experience <span class="optional">(optional)</span>
+                    </label>
+                    <select 
+                        id="regulatory_experience" 
+                        name="regulatory_experience" 
+                        class="form-control"
+                    >
+                        <option value="No regulatory experience">No regulatory experience</option>
+                        <option value="FDA">FDA</option>
+                        <option value="EMA">EMA</option>
+                        <option value="PMDA">PMDA</option>
+                        <option value="Multiple agencies">Multiple agencies</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise Areas -->
+        <div class="form-section">
+            <h3 class="form-section-title">
+                <i class="fas fa-star"></i> Areas of Expertise
+            </h3>
+
+            <div class="form-group">
+                <label>
+                    Select all that apply <span class="required">*</span>
+                </label>
+                <span class="form-help-text">Choose at least one area where you have significant expertise</span>
+                
+                <div class="checkbox-grid">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp1" name="expertise_areas" value="Vector Design & Engineering">
+                        <label for="exp1">Vector Design & Engineering</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp2" name="expertise_areas" value="AAV Production & Manufacturing">
+                        <label for="exp2">AAV Production & Manufacturing</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp3" name="expertise_areas" value="Process Development">
+                        <label for="exp3">Process Development</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp4" name="expertise_areas" value="Analytical Development">
+                        <label for="exp4">Analytical Development</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp5" name="expertise_areas" value="Quality Control/Assurance">
+                        <label for="exp5">Quality Control/Assurance</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp6" name="expertise_areas" value="Regulatory Affairs">
+                        <label for="exp6">Regulatory Affairs</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp7" name="expertise_areas" value="Clinical Development">
+                        <label for="exp7">Clinical Development</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp8" name="expertise_areas" value="Preclinical Studies">
+                        <label for="exp8">Preclinical Studies</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp9" name="expertise_areas" value="CMC Strategy">
+                        <label for="exp9">CMC Strategy</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="exp10" name="expertise_areas" value="Business Development">
+                        <label for="exp10">Business Development</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="aav_experience">
+                    Specific AAV Serotype Experience <span class="optional">(optional)</span>
+                </label>
+                <input 
+                    type="text" 
+                    id="aav_experience" 
+                    name="aav_experience" 
+                    class="form-control" 
+                    placeholder="e.g., AAV2, AAV5, AAV9, AAVrh10..."
+                >
+            </div>
+
+            <div class="form-group">
+                <label>
+                    Therapeutic Areas <span class="optional">(optional)</span>
+                </label>
+                
+                <div class="checkbox-grid">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ther1" name="therapeutic_areas" value="CNS/Neurological">
+                        <label for="ther1">CNS/Neurological</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ther2" name="therapeutic_areas" value="Ophthalmology">
+                        <label for="ther2">Ophthalmology</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ther3" name="therapeutic_areas" value="Liver/Metabolic">
+                        <label for="ther3">Liver/Metabolic</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ther4" name="therapeutic_areas" value="Muscular">
+                        <label for="ther4">Muscular</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ther5" name="therapeutic_areas" value="Cardiovascular">
+                        <label for="ther5">Cardiovascular</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ther6" name="therapeutic_areas" value="Oncology">
+                        <label for="ther6">Oncology</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Availability & Expectations -->
+        <div class="form-section">
+            <h3 class="form-section-title">
+                <i class="fas fa-calendar-check"></i> Availability & Expectations
+            </h3>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="consulting_availability">
+                        Consulting Availability <span class="required">*</span>
+                    </label>
+                    <select 
+                        id="consulting_availability" 
+                        name="consulting_availability" 
+                        class="form-control"
+                        required
+                    >
+                        <option value="">Select availability...</option>
+                        <option value="Full-time available">Full-time available</option>
+                        <option value="Part-time (10-20 hrs/week)">Part-time (10-20 hrs/week)</option>
+                        <option value="Project-based">Project-based</option>
+                        <option value="Limited availability">Limited availability</option>
+                        <option value="Currently employed">Currently employed</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="rate_expectation">
+                        Rate Expectation <span class="optional">(optional)</span>
+                    </label>
+                    <select 
+                        id="rate_expectation" 
+                        name="rate_expectation" 
+                        class="form-control"
+                    >
+                        <option value="Negotiable">Negotiable</option>
+                        <option value="$100-200/hr">$100-200/hr</option>
+                        <option value="$200-300/hr">$200-300/hr</option>
+                        <option value="$300-500/hr">$300-500/hr</option>
+                        <option value="$500+/hr">$500+/hr</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="motivation">
+                    Why do you want to join our expert network? <span class="required">*</span>
+                </label>
+                <textarea 
+                    id="motivation" 
+                    name="motivation" 
+                    class="form-control" 
+                    rows="5"
+                    placeholder="Share your motivation, what you hope to achieve, and how you can contribute to our network..."
+                    required
+                ></textarea>
+                <span class="form-help-text">
+                    Tell us about your goals, expertise, and what makes you a great fit for our network
+                </span>
+            </div>
+
+            <div class="form-group">
+                <label for="source">
+                    How did you hear about us? <span class="optional">(optional)</span>
+                </label>
+                <select 
+                    id="source" 
+                    name="source" 
+                    class="form-control"
+                >
+                    <option value="Website Expert Network Form">Select source...</option>
+                    <option value="LinkedIn">LinkedIn</option>
+                    <option value="Referral">Referral from colleague</option>
+                    <option value="Conference">Conference/Event</option>
+                    <option value="Search Engine">Search Engine</option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="form-submit-btn">
+            <i class="fas fa-paper-plane"></i>
+            Submit Application
+        </button>
+    </form>
+</div>

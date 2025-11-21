@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Test - Gene Therapy Consultancy</title>
+    
+    <!-- Test CSS Loading -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background: #f5f5f5;
+        }
+        
+        .test-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .test-item {
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+        }
+        
+        .status-ok {
+            border-color: #10b981;
+            background: #d1fae5;
+        }
+        
+        .status-error {
+            border-color: #ef4444;
+            background: #fee2e2;
+        }
+        
+        .status-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        
+        .test-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h1 {
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        code {
+            background: #f3f4f6;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .info-box {
+            background: #dbeafe;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1><i class="fas fa-vial"></i> Website Styling Diagnostic Test</h1>
+        
+        <div class="info-box">
+            <strong><i class="fas fa-info-circle"></i> Purpose:</strong> This page tests if your CSS files are loading correctly.
+        </div>
+        
+        <div id="tests-container">
+            <p>Running tests...</p>
+        </div>
+        
+        <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid #e5e7eb;">
+            <h3>Quick Fixes:</h3>
+            <ul style="line-height: 2;">
+                <li><strong>Hard Refresh:</strong> Press <code>Ctrl+Shift+R</code> (Windows) or <code>Cmd+Shift+R</code> (Mac)</li>
+                <li><strong>Clear Cache:</strong> Clear browser cache and reload</li>
+                <li><strong>Check URL:</strong> Make sure you're viewing via HTTP/HTTPS, not file://</li>
+                <li><strong>Verify Deployment:</strong> Ensure all CSS files were uploaded</li>
+            </ul>
+            
+            <a href="index.html" class="btn">
+                <i class="fas fa-home"></i> Go to Homepage
+            </a>
+            
+            <a href="contact.html" class="btn" style="margin-left: 1rem; background: #10b981;">
+                <i class="fas fa-envelope"></i> Go to Contact Page
+            </a>
+        </div>
+    </div>
+    
+    <script>
+        // Run diagnostics
+        window.addEventListener('DOMContentLoaded', function() {
+            const testsContainer = document.getElementById('tests-container');
+            const tests = [];
+            
+            // Test 1: Font Awesome
+            tests.push({
+                name: 'Font Awesome Icons',
+                check: function() {
+                    const icon = document.querySelector('.fas');
+                    const styles = window.getComputedStyle(icon);
+                    return styles.fontFamily.includes('Font Awesome');
+                },
+                message: 'Icon library loaded correctly'
+            });
+            
+            // Test 2: Main CSS
+            tests.push({
+                name: 'Main Stylesheet (style.css)',
+                check: function() {
+                    // Check if a specific class from style.css exists
+                    const testDiv = document.createElement('div');
+                    testDiv.className = 'navbar';
+                    document.body.appendChild(testDiv);
+                    const styles = window.getComputedStyle(testDiv);
+                    const hasStyles = styles.position !== 'static' || styles.background !== 'rgba(0, 0, 0, 0)';
+                    document.body.removeChild(testDiv);
+                    return hasStyles;
+                },
+                message: 'Main CSS file loaded and applied'
+            });
+            
+            // Test 3: CSS Files Count
+            tests.push({
+                name: 'CSS Files Loading',
+                check: function() {
+                    const styleSheets = document.styleSheets;
+                    return styleSheets.length >= 2; // At least 2 stylesheets
+                },
+                message: `${document.styleSheets.length} stylesheet(s) loaded`
+            });
+            
+            // Test 4: Current URL Protocol
+            tests.push({
+                name: 'URL Protocol',
+                check: function() {
+                    return window.location.protocol === 'http:' || window.location.protocol === 'https:';
+                },
+                message: `Viewing via ${window.location.protocol} (correct)`
+            });
+            
+            // Test 5: Base URL
+            tests.push({
+                name: 'Base URL Check',
+                check: function() {
+                    return !window.location.href.startsWith('file://');
+                },
+                message: 'Not viewing local file (good)'
+            });
+            
+            // Run tests and display results
+            let html = '';
+            let allPassed = true;
+            
+            tests.forEach(test => {
+                const passed = test.check();
+                allPassed = allPassed && passed;
+                
+                html += `
+                    <div class="test-item ${passed ? 'status-ok' : 'status-error'}">
+                        <div class="test-title">
+                            <span class="status-icon">${passed ? '✅' : '❌'}</span>
+                            ${test.name}
+                        </div>
+                        <div>${test.message}</div>
+                        ${!passed ? '<div style="margin-top: 0.5rem; color: #dc2626;"><strong>FAILED</strong></div>' : ''}
+                    </div>
+                `;
+            });
+            
+            // Add overall status
+            html = `
+                <div class="test-item ${allPassed ? 'status-ok' : 'status-error'}" style="font-size: 1.1rem; font-weight: 600;">
+                    <span class="status-icon">${allPassed ? '🎉' : '⚠️'}</span>
+                    Overall Status: ${allPassed ? 'ALL TESTS PASSED' : 'SOME TESTS FAILED'}
+                </div>
+            ` + html;
+            
+            // Display detailed environment info
+            html += `
+                <div class="info-box" style="margin-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem;"><i class="fas fa-cog"></i> Environment Info:</h3>
+                    <table style="width: 100%; line-height: 2;">
+                        <tr>
+                            <td><strong>Current URL:</strong></td>
+                            <td><code>${window.location.href}</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Protocol:</strong></td>
+                            <td><code>${window.location.protocol}</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stylesheets Loaded:</strong></td>
+                            <td><code>${document.styleSheets.length}</code></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Browser:</strong></td>
+                            <td><code>${navigator.userAgent.split(' ').pop()}</code></td>
+                        </tr>
+                    </table>
+                </div>
+            `;
+            
+            // List all loaded stylesheets
+            html += `
+                <div style="margin-top: 1.5rem;">
+                    <h3><i class="fas fa-file-code"></i> Loaded Stylesheets:</h3>
+                    <ol style="line-height: 2; margin-top: 1rem;">
+            `;
+            
+            for (let i = 0; i < document.styleSheets.length; i++) {
+                const sheet = document.styleSheets[i];
+                const href = sheet.href || '(inline styles)';
+                html += `<li><code>${href}</code></li>`;
+            }
+            
+            html += `
+                    </ol>
+                </div>
+            `;
+            
+            testsContainer.innerHTML = html;
+        });
+    </script>
+</body>
+</html>

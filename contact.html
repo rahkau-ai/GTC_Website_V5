@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gene Therapy Consultancy | Get in Touch</title>
+    <meta name="description"
+        content="Contact Gene Therapy Consultancy for services, free resources, or to join our expert network. Multiple ways to connect with us.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://genetherapyconsultancy.com/contact.html">
+    <meta property="og:title" content="Contact Gene Therapy Consultancy - Get in Touch">
+    <meta property="og:description"
+        content="Contact us for services, free resources, or to join our expert network. Book a strategy call today.">
+    <meta property="og:image" content="https://genetherapyconsultancy.com/assets/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://genetherapyconsultancy.com/contact.html">
+    <meta property="twitter:title" content="Contact Gene Therapy Consultancy">
+    <meta property="twitter:description"
+        content="Contact us for services, free resources, or to join our expert network.">
+    <meta property="twitter:image" content="https://genetherapyconsultancy.com/assets/images/og-image.jpg">
+
+    <!-- Performance Optimization: Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://api.leadconnectorhq.com">
+    <link rel="dns-prefetch" href="https://link.msgsndr.com">
+    <link rel="dns-prefetch" href="https://page.gensparksite.com">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/contact-page-improvements.css">
+    <link rel="stylesheet" href="css/contact-forms-mobile-fix.css">
+    <link rel="stylesheet" href="css/contact-page-style-fix.css">
+
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="contact-page">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Gene Therapy Consultancy Home">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/ab0e98134bfbe782a1c661c9dbd4ce7d"
+                        alt="Gene Therapy Consultancy" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="nav-menu" role="menu">
+                    <li><a href="index.html" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="about.html" class="nav-link"><span>About</span></a></li>
+                    <li><a href="method.html" class="nav-link"><span>The GTC Method</span></a></li>
+                    <li><a href="services.html" class="nav-link"><span>Services</span></a></li>
+                    <li><a href="insights.html" class="nav-link"><span>Insights</span></a></li>
+                    <li><a href="contact.html" class="nav-link"><span>Contact</span></a></li>
+                    <li><a href="contact.html#services" class="btn btn-primary"><span>Book a Strategy Call</span></a>
+                    </li>
+                </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                    aria-controls="nav-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Contact Navigation -->
+    <section class="hero" style="padding-bottom: 3rem;">
+        <div class="container">
+            <div class="hero-content fade-in-up text-center" style="margin-bottom: 3rem;">
+                <h1 style="margin-bottom: 1.5rem;">Get in Touch</h1>
+                <p class="hero-subtitle" style="margin-bottom: 2.5rem;">
+                    Choose how you'd like to connect with us
+                </p>
+
+                <!-- Contact Navigation Tabs in Hero -->
+                <div class="contact-nav" style="max-width: 900px; margin: 0 auto;">
+                    <a href="#services" class="contact-nav-btn active" data-section="services">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Services Inquiry</span>
+                    </a>
+                    <a href="#resources" class="contact-nav-btn" data-section="resources">
+                        <i class="fas fa-download"></i>
+                        <span>Free Resources</span>
+                    </a>
+                    <a href="#expert-network" class="contact-nav-btn" data-section="expert-network">
+                        <i class="fas fa-users"></i>
+                        <span>Join Expert Network</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Contact Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2>Inquire About Our Services</h2>
+                <p class="hero-subtitle text-secondary">
+                    Tell us about your gene therapy program and how we can help
+                </p>
+            </div>
+
+            <!-- Form Card with Feature Card Styling -->
+            <div class="feature-card" style="margin-bottom: 3rem; padding: 2.5rem;">
+                <div class="contact-form" style="min-height: 606px; position: relative;">
+                    <!-- Loading Indicator -->
+                    <div class="iframe-loading" id="loading-services">
+                        <div class="spinner"></div>
+                        <p>Loading form...</p>
+                    </div>
+
+                    <!-- Error Fallback -->
+                    <div class="iframe-error" id="error-services" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"
+                            style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3>Unable to Load Form</h3>
+                        <p>We're experiencing technical difficulties loading the form. Please contact us directly:</p>
+                        <a href="mailto:info@genetherapyconsultancy.com" class="btn btn-primary"
+                            style="margin-top: 1rem;">
+                            <i class="fas fa-envelope"></i> Email Us Instead
+                        </a>
+                    </div>
+
+                    <iframe src="https://api.leadconnectorhq.com/widget/form/tl7g5eIUWH5mUKYfOrfp"
+                        style="width:100%;height:606px;border:none;border-radius:3px" id="inline-tl7g5eIUWH5mUKYfOrfp"
+                        data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                        data-activation-type="alwaysActivated" data-activation-value=""
+                        data-deactivation-type="neverDeactivate" data-deactivation-value=""
+                        data-form-name="Inquire About Our Services Short Form" data-height="606"
+                        data-layout-iframe-id="inline-tl7g5eIUWH5mUKYfOrfp" data-form-id="tl7g5eIUWH5mUKYfOrfp"
+                        title="Inquire About Our Services Short Form">
+                    </iframe>
+                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                </div>
+            </div>
+
+            <!-- Info Cards Below Form -->
+            <div class="two-column" style="gap: 2rem;">
+                <div class="feature-card">
+                    <h3><i class="fas fa-info-circle"></i> What Happens Next?</h3>
+                    <ul style="margin: 1rem 0; color: var(--secondary-gray);">
+                        <li><strong>24-hour response:</strong> We'll contact you within one business day</li>
+                        <li><strong>Custom consultation:</strong> Discussion tailored to your specific needs</li>
+                        <li><strong>Clear recommendations:</strong> Actionable next steps for your program</li>
+                        <li><strong>No obligation:</strong> Explore how we can help with no commitment</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3><i class="fas fa-envelope"></i> Direct Contact</h3>
+                    <div style="margin: 1.5rem 0;">
+                        <p style="margin-bottom: 1rem;">
+                            <strong>Email:</strong><br>
+                            <a href="mailto:info@genetherapyconsultancy.com" style="color: var(--primary-blue);">
+                                info@genetherapyconsultancy.com
+                            </a>
+                        </p>
+                        <p>
+                            <strong>LinkedIn:</strong><br>
+                            <a href="https://www.linkedin.com/in/dr-rahul-kaushik/" target="_blank"
+                                style="color: var(--primary-blue);">
+                                Dr. Rahul Kaushik
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Resources Section -->
+    <section class="section bg-light" id="resources" style="display: none;">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2>Subscribe and Download Free Resources</h2>
+                <p class="hero-subtitle text-secondary">
+                    Get exclusive guides and frameworks to accelerate your gene therapy program
+                </p>
+            </div>
+
+            <!-- Form Card with Feature Card Styling -->
+            <div class="feature-card"
+                style="margin-bottom: 3rem; padding: 2.5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="contact-form" style="min-height: 630px; position: relative;">
+                    <!-- Loading Indicator -->
+                    <div class="iframe-loading" id="loading-resources">
+                        <div class="spinner"></div>
+                        <p>Loading form...</p>
+                    </div>
+
+                    <!-- Error Fallback -->
+                    <div class="iframe-error" id="error-resources" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"
+                            style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3>Unable to Load Form</h3>
+                        <p>We're experiencing technical difficulties loading the form. Please contact us directly:</p>
+                        <a href="mailto:info@genetherapyconsultancy.com" class="btn btn-primary"
+                            style="margin-top: 1rem;">
+                            <i class="fas fa-envelope"></i> Email Us Instead
+                        </a>
+                    </div>
+
+                    <iframe src="https://api.leadconnectorhq.com/widget/form/VyW0dVdgfzTpmH5FeOxy"
+                        style="width:100%;height:630px;border:none;border-radius:3px" id="inline-VyW0dVdgfzTpmH5FeOxy"
+                        data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                        data-activation-type="alwaysActivated" data-activation-value=""
+                        data-deactivation-type="neverDeactivate" data-deactivation-value=""
+                        data-form-name="Get exclusive guides and frameworks to accelerate your gene therapy program"
+                        data-height="630" data-layout-iframe-id="inline-VyW0dVdgfzTpmH5FeOxy"
+                        data-form-id="VyW0dVdgfzTpmH5FeOxy"
+                        title="Get exclusive guides and frameworks to accelerate your gene therapy program">
+                    </iframe>
+                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                </div>
+            </div>
+
+            <!-- Info Cards Below Form -->
+            <div class="two-column" style="gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div class="feature-card">
+                    <h3><i class="fas fa-gift"></i> What You'll Get</h3>
+                    <ul style="margin: 1rem 0; color: var(--secondary-gray);">
+                        <li><strong>Exclusive guides:</strong> Proven frameworks and methodologies</li>
+                        <li><strong>Expert insights:</strong> Knowledge from 10+ years of AAV experience</li>
+                        <li><strong>Actionable strategies:</strong> Practical steps you can implement</li>
+                        <li><strong>No cost:</strong> Free resources to accelerate your program</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3><i class="fas fa-lightbulb"></i> Why Download?</h3>
+                    <ul style="margin: 1rem 0; color: var(--secondary-gray);">
+                        <li><strong>Save time:</strong> Avoid common pitfalls and mistakes</li>
+                        <li><strong>Expert knowledge:</strong> Learn from successful programs</li>
+                        <li><strong>Stay updated:</strong> Get the latest industry insights</li>
+                        <li><strong>Make decisions:</strong> Data-driven guidance for your program</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Network Section -->
+    <section class="section" id="expert-network" style="display: none;">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2>Join Our Expert Network</h2>
+                <p class="hero-subtitle text-secondary">
+                    Amplify your gene therapy expertise with AI and earn while focusing on what you do best
+                </p>
+            </div>
+
+            <!-- Form Card with Feature Card Styling -->
+            <div class="feature-card"
+                style="margin-bottom: 3rem; padding: 2.5rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="contact-form" style="min-height: 1169px; position: relative;">
+                    <!-- Loading Indicator -->
+                    <div class="iframe-loading" id="loading-expert-network">
+                        <div class="spinner"></div>
+                        <p>Loading form...</p>
+                    </div>
+
+                    <!-- Error Fallback -->
+                    <div class="iframe-error" id="error-expert-network" style="display: none;">
+                        <i class="fas fa-exclamation-triangle"
+                            style="font-size: 2rem; color: var(--primary-blue); margin-bottom: 1rem;"></i>
+                        <h3>Unable to Load Form</h3>
+                        <p>We're experiencing technical difficulties loading the form. Please contact us directly:</p>
+                        <a href="mailto:info@genetherapyconsultancy.com" class="btn btn-primary"
+                            style="margin-top: 1rem;">
+                            <i class="fas fa-envelope"></i> Email Us Instead
+                        </a>
+                    </div>
+
+                    <iframe src="https://api.leadconnectorhq.com/widget/form/nuJxdcBfd1mxipZimsrf"
+                        style="width:100%;height:1169px;border:none;border-radius:3px" id="inline-nuJxdcBfd1mxipZimsrf"
+                        data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
+                        data-activation-type="alwaysActivated" data-activation-value=""
+                        data-deactivation-type="neverDeactivate" data-deactivation-value=""
+                        data-form-name="Join Our Expert Network" data-height="1169"
+                        data-layout-iframe-id="inline-nuJxdcBfd1mxipZimsrf" data-form-id="nuJxdcBfd1mxipZimsrf"
+                        title="Join Our Expert Network">
+                    </iframe>
+                    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                </div>
+            </div>
+
+            <!-- Info Cards Below Form -->
+            <div class="two-column" style="gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div class="feature-card">
+                    <h3><i class="fas fa-star"></i> Partnership Benefits</h3>
+                    <ul style="margin: 1rem 0; color: var(--secondary-gray);">
+                        <li>Amplify your expertise with AI-powered reach</li>
+                        <li>Earn more while focusing on your domain knowledge</li>
+                        <li>Zero business overhead—we handle everything</li>
+                        <li>Collaborate with elite gene therapy professionals</li>
+                        <li>Flexible engagement models</li>
+                        <li>Contribute to accelerating therapies to patients</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3><i class="fas fa-question-circle"></i> What We're Looking For</h3>
+                    <ul style="margin: 1rem 0; color: var(--secondary-gray);">
+                        <li>Deep expertise in specific areas of gene therapy</li>
+                        <li>Track record of successful program contributions</li>
+                        <li>Strong communication and consulting skills</li>
+                        <li>Commitment to quality and professionalism</li>
+                        <li>Interest in AI-enhanced service delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Main Brand Section -->
+                <div class="footer-brand">
+                    <h3>Gene Therapy Consultancy</h3>
+                    <p class="footer-tagline">AI-native intelligence for the gene therapy ecosystem.</p>
+                    <div class="footer-cta">
+                        <a href="contact.html#services" class="btn btn-primary">
+                            <i class="fas fa-calendar-check"></i> Book Strategy Call
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Navigation Links Grid -->
+                <div class="footer-links-grid">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul class="footer-links">
+                            <li><a href="about.html"><i class="fas fa-building"></i> About Us</a></li>
+                            <li><a href="about.html#founder"><i class="fas fa-user-tie"></i> Our Founder</a></li>
+                            <li><a href="method.html"><i class="fas fa-cogs"></i> The GTC Method</a></li>
+                            <li><a href="insights.html"><i class="fas fa-lightbulb"></i> Insights</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="services.html#development-category-overview"><i class="fas fa-dna"></i> AAV
+                                    Drug Development</a></li>
+                            <li><a href="services.html#ai-category-overview"><i class="fas fa-robot"></i> AI
+                                    Transformation</a></li>
+                            <li><a href="services.html#academic-grant-category-overview"><i
+                                        class="fas fa-file-contract"></i> Grant Services</a></li>
+                            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://www.linkedin.com/company/107369781/" target="_blank"
+                                class="footer-social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>Company Page</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/dr-rahul-kaushik/" target="_blank"
+                                class="footer-social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>Founder's Profile</span>
+                            </a>
+                        </div>
+                        <div class="footer-legal">
+                            <a href="terms-conditions.html">Terms & Conditions</a>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="legal-notice.html">Legal Notice</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gene Therapy Consultancy. All rights reserved.</p>
+                <p class="footer-subtitle">AI-native solutions for gene therapy excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Lead Magnet System -->
+    <link rel="stylesheet" href="css/blog-leadmagnet.css">
+    <script src="js/lead-magnet.js" defer></script>
+
+    <!-- Contact Page Navigation -->
+    <script>
+        // Loading and Error Handling for iframes
+        function hideLoading(formType) {
+            const loadingEl = document.getElementById(`loading-${formType}`);
+            if (loadingEl) {
+                loadingEl.style.opacity = '0';
+                setTimeout(() => {
+                    loadingEl.style.display = 'none';
+                }, 300);
+            }
+        }
+
+        function showError(formType) {
+            const loadingEl = document.getElementById(`loading-${formType}`);
+            const errorEl = document.getElementById(`error-${formType}`);
+            const iframe = document.getElementById(`inline-${formType === 'services' ? 'tl7g5eIUWH5mUKYfOrfp' : formType === 'resources' ? 'VyW0dVdgfzTpmH5FeOxy' : 'nuJxdcBfd1mxipZimsrf'}`);
+
+            if (loadingEl) loadingEl.style.display = 'none';
+            if (errorEl) errorEl.style.display = 'flex';
+            if (iframe) iframe.style.display = 'none';
+        }
+
+
+
+        // Section navigation with smooth transitions
+        document.addEventListener('DOMContentLoaded', () => {
+            const navBtns = document.querySelectorAll('.contact-nav-btn');
+            const sections = {
+                'services': document.getElementById('services'),
+                'resources': document.getElementById('resources'),
+                'expert-network': document.getElementById('expert-network')
+            };
+
+            let isInitialLoad = true;
+            let isTransitioning = false;
+
+            function showSection(sectionId, shouldScroll = false) {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                // Remove active from all buttons
+                navBtns.forEach(btn => btn.classList.remove('active'));
+
+                // Activate button
+                const activeBtn = document.querySelector(`[data-section="${sectionId}"]`);
+                if (activeBtn) activeBtn.classList.add('active');
+
+                // Fade out all sections smoothly
+                Object.values(sections).forEach(section => {
+                    if (section && section.style.display !== 'none') {
+                        section.style.opacity = '0';
+                        section.style.transform = 'translateY(-10px)';
+                    }
+                });
+
+                // After fade out, switch sections
+                setTimeout(() => {
+                    Object.values(sections).forEach(section => {
+                        if (section) {
+                            section.style.display = 'none';
+                            section.style.transform = 'translateY(0)';
+                        }
+                    });
+
+                    // Show selected section
+                    if (sections[sectionId]) {
+                        const section = sections[sectionId];
+                        section.style.display = 'block';
+                        section.style.opacity = '0';
+                        section.style.transform = 'translateY(10px)';
+
+                        // Force reflow
+                        section.offsetHeight;
+
+                        // Fade in with slight upward motion
+                        requestAnimationFrame(() => {
+                            section.style.opacity = '1';
+                            section.style.transform = 'translateY(0)';
+                        });
+                    }
+
+                    // Premium smooth scroll to section (only on user click, not initial load)
+                    if (shouldScroll && sections[sectionId]) {
+                        // Start scroll slightly before fade-in completes for seamless feel
+                        setTimeout(() => {
+                            const section = sections[sectionId];
+                            if (section) {
+                                // Get navbar height
+                                const navbar = document.querySelector('.navbar');
+                                const navHeight = navbar ? navbar.offsetHeight : 80;
+
+                                // Calculate the absolute position of the section from the top of the page
+                                let elementTop = 0;
+                                let element = section;
+
+                                // Calculate offset by walking up the DOM tree
+                                while (element) {
+                                    elementTop += element.offsetTop;
+                                    element = element.offsetParent;
+                                }
+
+                                // Target position: section top - navbar - comfortable padding
+                                const targetPosition = elementTop - navHeight - 50;
+
+                                // Get current scroll position and calculate distance
+                                const currentPos = window.pageYOffset;
+                                const distance = Math.abs(targetPosition - currentPos);
+
+                                // For very short distances, use instant scroll
+                                if (distance < 100) {
+                                    window.scrollTo({
+                                        top: targetPosition,
+                                        behavior: 'smooth'
+                                    });
+                                } else {
+                                    // Premium smooth scroll with custom easing
+                                    const startPos = currentPos;
+                                    const distance = targetPosition - startPos;
+                                    const duration = Math.min(800, Math.max(400, Math.abs(distance) / 2)); // Dynamic duration based on distance
+                                    let startTime = null;
+
+                                    // Easing function for ultra-smooth scroll
+                                    function easeInOutCubic(t) {
+                                        return t < 0.5
+                                            ? 4 * t * t * t
+                                            : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                                    }
+
+                                    function animation(currentTime) {
+                                        if (startTime === null) startTime = currentTime;
+                                        const timeElapsed = currentTime - startTime;
+                                        const progress = Math.min(timeElapsed / duration, 1);
+                                        const easeProgress = easeInOutCubic(progress);
+
+                                        window.scrollTo(0, startPos + (distance * easeProgress));
+
+                                        if (progress < 1) {
+                                            requestAnimationFrame(animation);
+                                        }
+                                    }
+
+                                    requestAnimationFrame(animation);
+                                }
+                            }
+                        }, 200); // Slightly longer delay for premium feel
+                    }
+
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, 1500); // Extended to allow scroll to complete smoothly
+                }, 500); // Longer fade out for smoother, less rushed feel // Slightly longer fade out for smoother feel
+            }
+
+            // Setup nav buttons
+            navBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const sectionId = btn.dataset.section;
+
+                    // Store current scroll position to prevent any jumping
+                    const currentScroll = window.pageYOffset;
+
+                    // Update URL without scrolling
+                    history.pushState(null, null, `#${sectionId}`);
+
+                    // Ensure we stay at current position (prevent browser hash scroll)
+                    window.scrollTo(0, currentScroll);
+
+                    // Show section with controlled scroll
+                    showSection(sectionId, true);
+                });
+            });
+
+            // Prevent default hash scroll behavior on page load
+            if (window.location.hash) {
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 1);
+            }
+
+            // Handle URL hash on load - NO auto scroll on initial load
+            setTimeout(() => {
+                const hash = window.location.hash.substring(1);
+                if (hash && sections[hash]) {
+                    showSection(hash, false);
+                } else {
+                    showSection('services', false); // Default section
+                }
+                isInitialLoad = false;
+            }, 10);
+
+            // Handle browser back/forward
+            window.addEventListener('hashchange', () => {
+                if (!isInitialLoad) {
+                    const hash = window.location.hash.substring(1);
+                    if (hash && sections[hash]) {
+                        showSection(hash, true);
+                    }
+                }
+            });
+
+            // Handle resource param from insights page
+            const urlParams = new URLSearchParams(window.location.search);
+            const resource = urlParams.get('resource');
+            if (resource) {
+                setTimeout(() => {
+                    showSection('resources', false);
+                    document.getElementById('resource-type').value = resource;
+                    if (typeof updateResourceDisplay === 'function') {
+                        updateResourceDisplay(resource);
+                    }
+                }, 100);
+            }
+        });
+
+    </script>
+
+    <style>
+        /* Premium smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Premium smooth transitions for contact sections */
+        #services,
+        #resources,
+        #expert-network {
+            opacity: 1;
+            transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
+            scroll-margin-top: 120px;
+            /* Prevent browser from scrolling sections under navbar */
+            will-change: opacity, transform;
+            /* Optimize for animation performance */
+        }
+
+        /* Smooth tab transitions */
+        .contact-nav-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .contact-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-nav-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.5rem 2rem;
+            background: white;
+            border: 2px solid var(--medium-gray);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            min-width: 180px;
+        }
+
+        .contact-nav-btn i {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            transition: color 0.3s ease;
+        }
+
+        .contact-nav-btn span {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .contact-nav-btn:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(15, 82, 186, 0.15);
+        }
+
+        .contact-nav-btn.active {
+            background: var(--primary-blue);
+            color: white;
+            border-color: var(--primary-blue);
+        }
+
+        .contact-nav-btn.active i {
+            color: white;
+        }
+
+        .required {
+            color: #e53935;
+        }
+
+        /* Loading Indicator Styles */
+        .iframe-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+        }
+
+        .iframe-loading p {
+            margin-top: 1rem;
+            color: var(--secondary-gray);
+            font-size: 1rem;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--light-gray);
+            border-top-color: var(--primary-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Error Message Styles */
+        .iframe-error {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            z-index: 10;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .iframe-error h3 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .iframe-error p {
+            color: var(--secondary-gray);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-nav {
+                flex-direction: column;
+            }
+
+            .contact-nav-btn {
+                width: 100%;
+            }
+
+            .spinner {
+                width: 40px;
+                height: 40px;
+            }
+
+            .iframe-error {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+
+    <!-- Simple form loading - hide spinners after delay -->
+    <script>
+        // Hide loading spinners after forms have had time to load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Give forms 3 seconds to load, then hide spinners
+            setTimeout(() => {
+                ['services', 'resources', 'expert-network'].forEach(formType => {
+                    hideLoading(formType);
+                });
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

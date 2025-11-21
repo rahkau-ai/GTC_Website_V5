@@ -1,0 +1,224 @@
+/* Contact Page - Style Consistency Fix */
+
+/* Ensure all contact page sections match the rest of the website */
+
+/* Section styling consistency */
+.contact-page #services,
+.contact-page #resources,
+.contact-page #expert-network {
+    padding: 4rem 0;
+}
+
+/* Form containers - match feature card styling */
+.contact-page .feature-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+}
+
+.contact-page .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Form card container - remove excessive inline styles */
+.contact-page .feature-card:has(.contact-form) {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Info cards below forms - consistent styling */
+.contact-page .two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 2rem auto 0;
+}
+
+/* Card headings - match website style */
+.contact-page .feature-card h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.contact-page .feature-card h3 i {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+}
+
+/* List styling in cards */
+.contact-page .feature-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.contact-page .feature-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--secondary-gray);
+    line-height: 1.6;
+}
+
+.contact-page .feature-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* Links in cards */
+.contact-page .feature-card a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.contact-page .feature-card a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Section headers */
+.contact-page .text-center h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.contact-page .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--secondary-gray);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Loading and error states */
+.contact-page .iframe-loading,
+.contact-page .iframe-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contact-page .iframe-error h3 {
+    color: var(--text-dark);
+    margin: 1rem 0;
+}
+
+.contact-page .iframe-error p {
+    color: var(--secondary-gray);
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons consistency */
+.contact-page .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-page .btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(15, 82, 186, 0.3);
+}
+
+.contact-page .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 82, 186, 0.4);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .contact-page #services,
+    .contact-page #resources,
+    .contact-page #expert-network {
+        padding: 3rem 0;
+    }
+    
+    .contact-page .two-column {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-page .feature-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-page .feature-card:has(.contact-form) {
+        padding: 1.5rem;
+    }
+    
+    .contact-page .text-center h2 {
+        font-size: 2rem;
+    }
+    
+    .contact-page .hero-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page .feature-card {
+        padding: 1.5rem 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-page .feature-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-page .text-center h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Remove inline styles that conflict with proper styling */
+.contact-page .feature-card[style*="margin-bottom: 3rem"] {
+    margin-bottom: 2rem !important;
+}
+
+.contact-page .feature-card[style*="padding: 2.5rem"] {
+    padding: 2.5rem !important;
+}
+
+@media (max-width: 768px) {
+    .contact-page .feature-card[style*="padding: 2.5rem"] {
+        padding: 2rem 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-page .feature-card[style*="padding: 2.5rem"] {
+        padding: 1.5rem 1rem !important;
+    }
+}

@@ -1,0 +1,22 @@
+PRIORITY SERVICES THAT NEED NEXT STEPS (Customer Journey Critical):
+
+✅ COMPLETED:
+- vector-design (has Next Steps)
+- target-validation (already had Next Steps) 
+- cmc-assessment (added Next Steps)
+- preclinical-design (added Next Steps)
+- outsourcing-strategy (added Next Steps)
+- technology-validation (added Next Steps)
+- preclinical-validate (added Next Steps)
+
+🎯 STILL NEED NEXT STEPS:
+- roi-toolkit (Technology → Market)
+- kol-strategy (Technology → Partnership)
+- partnership-strategy (Critical for all journeys)
+- launch-assurance (Technology → Market finale)
+- investment-diligence (Investment journey)
+- strategic-intelligence (AI services entry)
+- grant-navigator (Academic journey)
+- disease-optimization (Development optimization)
+
+These are the most critical based on customer journey flows.

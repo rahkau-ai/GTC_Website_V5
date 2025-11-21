@@ -1,0 +1,408 @@
+/* Expert Profile Modal Styles */
+
+.expert-card-clickable {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.expert-card-clickable::after {
+    content: 'Click to learn more';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-blue);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.expert-card-clickable:hover::after {
+    opacity: 1;
+}
+
+.expert-card-clickable:hover {
+    box-shadow: 0 12px 32px rgba(15, 82, 186, 0.2);
+    border-color: var(--primary-blue);
+}
+
+/* Modal Container */
+.expert-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.expert-modal.active {
+    opacity: 1;
+}
+
+.expert-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.expert-modal-content {
+    position: relative;
+    background: white;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.expert-modal.active .expert-modal-content {
+    transform: scale(1);
+}
+
+/* Close Button */
+.expert-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.expert-modal-close:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: rotate(90deg);
+}
+
+/* Modal Header */
+.expert-modal-header {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #2E3C4E 100%);
+    padding: 3rem 2rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    color: white;
+}
+
+.expert-modal-photo {
+    flex-shrink: 0;
+}
+
+.expert-modal-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.placeholder-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.expert-modal-header-info h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    color: white;
+    opacity: 1;
+    animation: none;
+}
+
+.expert-modal-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.expert-modal-header-info .btn {
+    margin-top: 0.5rem;
+    background: white;
+    color: var(--primary-blue);
+    border-color: white;
+}
+
+.expert-modal-header-info .btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Modal Body */
+.expert-modal-body {
+    padding: 2rem;
+    max-height: calc(90vh - 200px);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.expert-modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.expert-modal-body::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.expert-modal-body::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 4px;
+}
+
+.expert-modal-body::-webkit-scrollbar-thumb:hover {
+    background: #0d4699;
+}
+
+/* Modal Sections */
+.expert-modal-section {
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.expert-modal-section h3 {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expert-modal-section h3 i {
+    font-size: 1.2rem;
+}
+
+.expert-modal-section p {
+    color: var(--text-dark);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.expert-modal-mission {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-blue);
+    font-size: 1.05rem !important;
+    line-height: 1.9 !important;
+}
+
+/* Special Section Styles */
+.expert-modal-insight {
+    background: #fff3cd;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #ffc107;
+}
+
+.expert-modal-transformation {
+    background: #d4edda;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #28a745;
+}
+
+/* Lists */
+.expert-modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.expert-modal-list li {
+    padding: 0.6rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.7;
+}
+
+.expert-modal-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+.expert-modal-credentials {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.expert-modal-credentials li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.expert-modal-credentials li i {
+    color: #28a745;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Grid Layout */
+.expert-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Tags */
+.expert-modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.expert-tag {
+    background: var(--primary-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.expert-tag:hover {
+    background: #0d4699;
+    transform: translateY(-2px);
+}
+
+/* CTA Section */
+.expert-modal-cta {
+    background: var(--gradient-primary);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 2rem;
+    color: white;
+}
+
+.expert-modal-cta h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.expert-modal-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1.5rem;
+}
+
+.expert-modal-cta .btn {
+    background: white;
+    color: var(--primary-blue);
+    border-color: white;
+}
+
+.expert-modal-cta .btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+}
+
+/* Placeholder Specific Styles */
+.expert-modal-placeholder .expert-modal-body {
+    text-align: center;
+}
+
+.expert-modal-placeholder .expert-modal-list {
+    text-align: left;
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expert-modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .expert-modal-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem 1.5rem;
+    }
+
+    .expert-modal-header-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .expert-modal-body {
+        padding: 1.5rem;
+        max-height: calc(95vh - 180px);
+    }
+
+    .expert-modal-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .expert-modal-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .expert-modal-close {
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 36px;
+        height: 36px;
+    }
+
+    .expert-modal-tags {
+        justify-content: center;
+    }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

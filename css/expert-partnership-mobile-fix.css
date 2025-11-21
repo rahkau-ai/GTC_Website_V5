@@ -1,0 +1,94 @@
+/* Expert Partnership Mobile Icon Alignment Fix */
+
+@media (max-width: 768px) {
+    /* Center icons on mobile for expert-partnership page */
+    body .feature-card {
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+    
+    body .feature-card .feature-icon {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.25rem;
+    }
+    
+    body .feature-card h3 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    body .feature-card ul {
+        text-align: left !important;
+        padding-left: 1.25rem !important;
+        max-width: 100%;
+    }
+    
+    body .feature-card li {
+        text-align: left;
+    }
+    
+    /* Reduce padding for two-column layout on mobile */
+    body .two-column {
+        gap: 1.5rem;
+    }
+    
+    /* How It Works Section - Center numbered steps on mobile */
+    #how-it-works .feature-card > div[style*="display: flex"] {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+    }
+    
+    #how-it-works .feature-card > div[style*="display: flex"] > div:first-child {
+        min-width: auto !important;
+        margin-bottom: 1rem;
+        font-size: 3rem !important;
+    }
+    
+    #how-it-works .feature-card > div[style*="display: flex"] > div:last-child {
+        width: 100%;
+    }
+    
+    #how-it-works .feature-card h3 {
+        text-align: center;
+    }
+    
+    #how-it-works .feature-card ul {
+        text-align: left !important;
+        padding-left: 1.25rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    body .feature-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    body .feature-card .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    body .feature-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    body .feature-card ul {
+        padding-left: 1rem !important;
+        font-size: 0.95rem;
+    }
+    
+    /* How It Works - Smaller numbers on tiny screens */
+    #how-it-works .feature-card > div[style*="display: flex"] > div:first-child {
+        font-size: 2.5rem !important;
+        margin-bottom: 0.75rem;
+    }
+    
+    #how-it-works .feature-card h3 {
+        font-size: 1.15rem;
+    }
+}

@@ -1,0 +1,40 @@
+SERVICES ON SERVICES PAGE (from our previous analysis):
+
+Grant & Foundation (2):
+1. grant-navigator
+2. patient-tpp
+
+Drug Development (6):
+1. vector-design
+2. target-validation 
+3. cmc-assessment
+4. preclinical-design
+5. outsourcing-strategy
+6. disease-optimization
+
+AI Transformation (5):
+1. strategic-intelligence
+2. education
+3. implementation
+4. consulting
+5. engagement-models
+
+Enabling Technology (7):
+1. technology-validation
+2. roi-toolkit
+3. niche-navigator
+4. kol-strategy
+5. partnership-strategy
+6. regulatory-compatibility
+7. launch-assurance
+
+Investment & Strategy (4):
+1. preclinical-validate
+2. patent-review
+3. portfolio-guard
+4. investment-diligence
+
+CNS Specific (1):
+1. cns-services
+
+TOTAL: 25 services

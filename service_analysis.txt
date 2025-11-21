@@ -1,0 +1,34 @@
+HOMEPAGE TO SERVICES PAGE AUDIT
+
+Services Referenced in Homepage Dropdown:
+1. services.html#technology-validation ✓ (exists)
+2. services.html#partnership-strategy ✓ (exists)
+3. services.html#cmc-assessment ✓ (exists)
+4. services.html#target-validation ✓ (exists)
+5. services.html#vector-design ✓ (exists)
+6. services.html#preclinical-design ✓ (exists)
+7. services.html#grant-navigator ✓ (exists)
+8. services.html#patient-tpp ✓ (exists)
+9. services.html#strategic-intelligence ✓ (exists)
+10. services.html#disease-optimization ✓ (exists)
+11. services.html#investment-diligence ✓ (exists)
+12. services.html#outsourcing-strategy ✓ (exists)
+13. services.html#cns-services ✓ (exists)
+14. services.html#kol-strategy ✓ (exists)
+15. services.html#launch-assurance ✓ (exists)
+16. services.html#roi-toolkit ✓ (exists)
+17. services.html#preclinical-validate ✓ (exists)
+18. services.html#patent-review ✓ (exists)
+19. services.html#portfolio-guard ✓ (exists)
+20. services.html#regulatory-compatibility ✓ (exists)
+
+ISSUE ANALYSIS:
+The homepage dropdown system has many more service entries than what appears on the services page because:
+1. Multiple homepage dropdown entries can point to the SAME service on the services page
+2. The homepage has different dropdown options for different audiences/interests, but they often link to the same underlying service
+3. The services page shows actual distinct services, while homepage shows different "views" or "approaches" to those services
+
+MISMATCH ISSUES TO FIX:
+1. Service counts on services page summary cards may not reflect the variety of ways to access services from homepage
+2. Some services referenced in homepage may not exist (need to verify all links work)
+3. Cross-page navigation may not be working properly for all linked services
